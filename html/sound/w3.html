@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>  
+        input.ch {
+            width:12px;
+            height:12px;
+        }
+        input.para1 {
+            padding:5px 10px;
+            font-size:10px;
+        }
+        label {
+            font-size: 17px;
+            padding: 20px 30px;
+        }
+        .fb {
+            width:70px;
+            height:30px;
+            background-image: url(../../files_for_website/snow.png);
+            color: #dbf2ff;
+            font-weight:bold;
+        }
+        #mood {
+            background-color: #e7e7e7;
+            padding: 6px 10px;
+            text-decoration: none;
+            margin-left: 95px;
+            color: #dbf2ff;
+            font-size:13px;
+            font-weight: bold;
+            background-image: url(../../files_for_website/snow.png);
+        }
+    </style>
+    <script>
+        function changeVolume() {
+            volumesize1 = document.fo.volume1.value/10
+            volumesize2 = document.fo.volume2.value/10
+            volumesize3 = document.fo.volume3.value/10
+            volumesize4 = document.fo.volume4.value/10
+            volumesize5 = document.fo.volume5.value/10
+            volumesize6 = document.fo.volume6.value/10
+            volumesize7 = document.fo.volume7.value/10
+            volumesize8 = document.fo.volume8.value/10
+            
+            document.getElementById("audio1").volume=volumesize1;
+            document.getElementById("audio2").volume=volumesize2;
+            document.getElementById("audio3").volume=volumesize3;
+            document.getElementById("audio4").volume=volumesize4;  
+            document.getElementById("audio5").volume=volumesize5;
+            document.getElementById("audio6").volume=volumesize6;
+            document.getElementById("audio7").volume=volumesize7;
+            document.getElementById("audio8").volume=volumesize8;
+        }
+        function myfunction1() {
+            if(document.fo.song1.checked) {
+                document.getElementById("audio1").play()
+            }
+            if(document.fo.song2.checked) {
+                document.getElementById("audio2").play()
+            }
+            if(document.fo.song3.checked) {
+                document.getElementById("audio3").play()
+            }
+            if(document.fo.song4.checked) {
+                document.getElementById("audio4").play()
+            }
+            if(document.fo.song5.checked) {
+                document.getElementById("audio5").play()
+            }
+            if(document.fo.song6.checked) {
+                document.getElementById("audio6").play()
+            }
+            if(document.fo.song7.checked) {
+                document.getElementById("audio7").play()
+            }
+            if(document.fo.song8.checked) {
+                document.getElementById("audio8").play()
+            }
+        
+        }
+        function myfunction2() {
+            document.getElementById("audio1").pause()
+            document.getElementById("audio2").pause()
+            document.getElementById("audio3").pause()
+            document.getElementById("audio4").pause()
+            document.getElementById("audio5").pause()
+            document.getElementById("audio6").pause()
+            document.getElementById("audio7").pause()
+            document.getElementById("audio8").pause()
+            
+            document.fo.volume1.value=5
+            document.fo.volume2.value=5
+            document.fo.volume3.value=5
+            document.fo.volume4.value=5
+            document.fo.volume5.value=5
+            document.fo.volume6.value=5
+            document.fo.volume7.value=5
+            document.fo.volume8.value=5
+            
+            document.fo.song1.checked=false
+            document.fo.song2.checked=false
+            document.fo.song3.checked=false
+            document.fo.song4.checked=false
+            document.fo.song5.checked=false
+            document.fo.song6.checked=false
+            document.fo.song7.checked=false
+            document.fo.song8.checked=false
+        }
+        
+        function changeDuration(min) {
+            if(min==1) {
+                document.getElementById("audio1").src="../../sound_files/streamx30.mp3"
+                
+                document.getElementById("D1").style.backgroundColor="#b0f5ef"
+                document.getElementById("D2").style.backgroundColor="#e7e7e7"
+                document.getElementById("D3").style.backgroundColor="#e7e7e7"
+            }
+            if(min==2) {
+                document.getElementById("audio1").src="../../sound_files/streamx30.mp3"
+//                document.getElementById("audio1").src="../../sound_files/streamx60.mp3"
+                
+                document.getElementById("D1").style.backgroundColor="#e7e7e7"
+                document.getElementById("D2").style.backgroundColor="#b0f5ef"
+                document.getElementById("D3").style.backgroundColor="#e7e7e7"
+            }
+            if(min==3) {
+                document.getElementById("audio1").src="../../sound_files/streamx30.mp3"
+//                document.getElementById("audio1").src="../../sound_files/streamx90.mp3"
+                
+                document.getElementById("D1").style.backgroundColor="#e7e7e7"
+                document.getElementById("D2").style.backgroundColor="#e7e7e7"
+                document.getElementById("D3").style.backgroundColor="#b0f5ef"
+            }
+            if(min==4) {
+                document.getElementById("audio2").src="../../sound_files/birds1x30.mp3"
+                
+                document.getElementById("D4").style.backgroundColor="#b0f5ef"
+                document.getElementById("D5").style.backgroundColor="#e7e7e7"
+                document.getElementById("D6").style.backgroundColor="#e7e7e7"
+            }
+            if(min==5) {
+                document.getElementById("audio2").src="../../sound_files/birds1x30.mp3"
+//                document.getElementById("audio2").src="../../sound_files/birds1x60.mp3"
+                
+                document.getElementById("D4").style.backgroundColor="#e7e7e7"
+                document.getElementById("D5").style.backgroundColor="#b0f5ef"
+                document.getElementById("D6").style.backgroundColor="#e7e7e7"
+            }
+            if(min==6) {
+                document.getElementById("audio2").src="../../sound_files/birds1x30.mp3"
+//                document.getElementById("audio2").src="../../sound_files/birds1x90.mp3"
+                
+                document.getElementById("D4").style.backgroundColor="#e7e7e7"
+                document.getElementById("D5").style.backgroundColor="#e7e7e7"
+                document.getElementById("D6").style.backgroundColor="#b0f5ef"
+            }
+            if(min==7) {
+                document.getElementById("audio3").src="../../sound_files/bamboosx30.mp3"
+                
+                document.getElementById("D7").style.backgroundColor="#b0f5ef"
+                document.getElementById("D8").style.backgroundColor="#e7e7e7"
+                document.getElementById("D9").style.backgroundColor="#e7e7e7"
+            }
+            if(min==8) {
+                document.getElementById("audio3").src="../../sound_files/bamboosx30.mp3"
+//                document.getElementById("audio3").src="../../sound_files/bamboosx60.mp3"
+                
+                document.getElementById("D7").style.backgroundColor="#e7e7e7"
+                document.getElementById("D8").style.backgroundColor="#b0f5ef"
+                document.getElementById("D9").style.backgroundColor="#e7e7e7"
+            }
+            if(min==9) {
+                document.getElementById("audio3").src="../../sound_files/bamboosx30.mp3"
+//                document.getElementById("audio3").src="../../sound_files/bamboosx90.mp3"
+                
+                document.getElementById("D7").style.backgroundColor="#e7e7e7"
+                document.getElementById("D8").style.backgroundColor="#e7e7e7"
+                document.getElementById("D9").style.backgroundColor="#b0f5ef"
+            }
+            if(min==10) {
+                document.getElementById("audio4").src="../../sound_files/wavex30.mp3"
+                
+                document.getElementById("D10").style.backgroundColor="#b0f5ef"
+                document.getElementById("D11").style.backgroundColor="#e7e7e7"
+                document.getElementById("D12").style.backgroundColor="#e7e7e7"
+            }
+            if(min==11) {
+                document.getElementById("audio4").src="../../sound_files/wavex30.mp3"
+//                document.getElementById("audio4").src="../../sound_files/wavex60.mp3"
+                
+                document.getElementById("D10").style.backgroundColor="#e7e7e7"
+                document.getElementById("D11").style.backgroundColor="#b0f5ef"
+                document.getElementById("D12").style.backgroundColor="#e7e7e7"
+            }
+            if(min==12) {
+                document.getElementById("audio4").src="../../sound_files/wavex30.mp3"
+//                document.getElementById("audio4").src="../../sound_files/wavex90.mp3"
+                
+                document.getElementById("D10").style.backgroundColor="#e7e7e7"
+                document.getElementById("D11").style.backgroundColor="#e7e7e7"
+                document.getElementById("D12").style.backgroundColor="#b0f5ef"
+            }
+            if(min==13) {
+                document.getElementById("audio5").src="../../sound_files/seabirdx30.mp3"
+                
+                document.getElementById("D13").style.backgroundColor="#b0f5ef"
+                document.getElementById("D14").style.backgroundColor="#e7e7e7"
+                document.getElementById("D15").style.backgroundColor="#e7e7e7"
+            }
+            if(min==14) {
+                document.getElementById("audio5").src="../../sound_files/seabirdx30.mp3"
+//                document.getElementById("audio5").src="../../sound_files/seabirdx60.mp3"
+                
+                document.getElementById("D13").style.backgroundColor="#e7e7e7"
+                document.getElementById("D14").style.backgroundColor="#b0f5ef"
+                document.getElementById("D15").style.backgroundColor="#e7e7e7"
+            }
+            if(min==15) {
+                document.getElementById("audio5").src="../../sound_files/seabirdx30.mp3"
+//                document.getElementById("audio5").src="../../sound_files/seabirdx90.mp3"
+                
+                document.getElementById("D13").style.backgroundColor="#e7e7e7"
+                document.getElementById("D14").style.backgroundColor="#e7e7e7"
+                document.getElementById("D15").style.backgroundColor="#b0f5ef"
+            }
+            if(min==16) {
+                document.getElementById("audio6").src="../../sound_files/walkingInForestx30.mp3"
+                
+                document.getElementById("D16").style.backgroundColor="#b0f5ef"
+                document.getElementById("D17").style.backgroundColor="#e7e7e7"
+                document.getElementById("D18").style.backgroundColor="#e7e7e7"
+            }
+            if(min==17) {
+                document.getElementById("audio6").src="../../sound_files/walkingInForestx30.mp3"
+//                document.getElementById("audio6").src="../../sound_files/walkingInForestx60.mp3"
+                
+                document.getElementById("D16").style.backgroundColor="#e7e7e7"
+                document.getElementById("D17").style.backgroundColor="#b0f5ef"
+                document.getElementById("D18").style.backgroundColor="#e7e7e7"
+            }
+            if(min==18) {
+                document.getElementById("audio6").src="../../sound_files/walkingInForestx30.mp3"
+//                document.getElementById("audio6").src="../../sound_files/walkingInForestx90.mp3"
+                
+                
+                document.getElementById("D16").style.backgroundColor="#e7e7e7"
+                document.getElementById("D17").style.backgroundColor="#e7e7e7"
+                document.getElementById("D18").style.backgroundColor="#b0f5ef"
+            }
+            if(min==19) {
+                document.getElementById("audio7").src="../../sound_files/birds2x30.mp3"
+                
+                document.getElementById("D19").style.backgroundColor="#b0f5ef"
+                document.getElementById("D20").style.backgroundColor="#e7e7e7"
+                document.getElementById("D21").style.backgroundColor="#e7e7e7"
+            }
+            if(min==20) {
+                document.getElementById("audio7").src="../../sound_files/birds2x30.mp3"
+//                document.getElementById("audio7").src="../../sound_files/birds2x60.mp3"
+                
+                document.getElementById("D19").style.backgroundColor="#e7e7e7"
+                document.getElementById("D20").style.backgroundColor="#b0f5ef"
+                document.getElementById("D21").style.backgroundColor="#e7e7e7"
+            }
+            if(min==21) {
+                document.getElementById("audio7").src="../../sound_files/birds2x30.mp3"
+//                document.getElementById("audio7").src="../../sound_files/birds2x90.mp3"
+                
+                document.getElementById("D19").style.backgroundColor="#e7e7e7"
+                document.getElementById("D20").style.backgroundColor="#e7e7e7"
+                document.getElementById("D21").style.backgroundColor="#b0f5ef"
+            }
+            if(min==22) {
+                document.getElementById("audio8").src="../../sound_files/leafx30.mp3"
+                
+                document.getElementById("D22").style.backgroundColor="#b0f5ef"
+                document.getElementById("D23").style.backgroundColor="#e7e7e7"
+                document.getElementById("D24").style.backgroundColor="#e7e7e7"
+            }
+            if(min==23) {
+                document.getElementById("audio8").src="../../sound_files/leafx30.mp3"
+//                document.getElementById("audio8").src="../../sound_files/leafx60.mp3"
+                
+                document.getElementById("D22").style.backgroundColor="#e7e7e7"
+                document.getElementById("D23").style.backgroundColor="#b0f5ef"
+                document.getElementById("D24").style.backgroundColor="#e7e7e7"
+            }
+            if(min==24) {
+                document.getElementById("audio8").src="../../sound_files/leafx30.mp3"
+//                document.getElementById("audio8").src="../../sound_files/leafx90.mp3"
+                
+                document.getElementById("D22").style.backgroundColor="#e7e7e7"
+                document.getElementById("D23").style.backgroundColor="#e7e7e7"
+                document.getElementById("D24").style.backgroundColor="#b0f5ef"
+            }
+            return false
+        }
+</script>
+</head>
+<body>
+    
+    <form name="fo">
+        <label style="color:#ffffff;">
+            <input type="checkbox" name="song1" class="ch">Stream
+        </label><br>
+        <input type="button" onclick="changeDuration(1)" value="30 min" class="para1" id="D1">
+        <input type="button" onclick="changeDuration(2)" value="60 min" class="para1" id="D2">
+        <input type="button" onclick="changeDuration(3)" value="90 min" class="para1" id="D3">
+        <input type="range" min="0" max="10" name="volume1" style="width:150px;" onchange="changeVolume()">
+            <audio controls id="audio1" style="display:none;">
+                <source src="../../sound_files/streamx30.mp3" id="aud1" />
+            </audio> <br><br>
+        
+        <label style="color:#ffffff;">
+            <input type="checkbox" name="song2" class="ch">Gyeongju Birds
+        </label><br>
+        <input type="button" onclick="changeDuration(4)" value="30 min" class="para1" id="D4">
+        <input type="button" onclick="changeDuration(5)" value="60 min" class="para1" id="D5">
+        <input type="button" onclick="changeDuration(6)" value="90 min" class="para1" id="D6">
+        <input type="range" min="0" max="10" name="volume2" style="width:150px;" onchange="changeVolume()">
+            <audio controls id="audio2" style="display:none;">
+                <source src="../../sound_files/birds1x30.mp3" id="aud2" />
+            </audio> <br><br>
+        
+        <label style="color:#ffffff;">
+            <input type="checkbox" name="song3" class="ch">Bamboo
+        </label><br>
+        <input type="button" onclick="changeDuration(7)" value="30 min" class="para1" id="D7">
+        <input type="button" onclick="changeDuration(8)" value="60 min" class="para1" id="D8">
+        <input type="button" onclick="changeDuration(9)"  value="90 min" class="para1" id="D9">
+        <input type="range" min="0" max="10" name="volume3" style="width:150px;" onchange="changeVolume()">
+            <audio controls id="audio3" style="display:none;">
+                <source src="../../sound_files/bamboosx30.mp3" id="aud3" />
+            </audio> <br><br>
+        
+        <label style="color:#ffffff;">
+            <input type="checkbox" name="song4" class="ch">Waves
+        </label><br>
+        <input type="button" onclick="changeDuration(10)" value="30 min" class="para1" id="D10">
+        <input type="button" onclick="changeDuration(11)" value="60 min" class="para1" id="D11">
+        <input type="button" onclick="changeDuration(12)" value="90 min" class="para1" id="D12">
+        <input type="range" min="0" max="10" name="volume4" style="width:150px;" onchange="changeVolume()">
+            <audio controls id="audio4" style="display:none;">
+                <source src="../../sound_files/wavex30.mp3" id="aud4"/>
+            </audio> <br><br>
+        
+        <label style="color:#ffffff;">
+            <input type="checkbox" name="song5" class="ch">Sea Birds
+        </label><br>
+        <input type="button" onclick="changeDuration(13)" value="30 min" class="para1" id="D13">
+        <input type="button" onclick="changeDuration(14)" value="60 min" class="para1" id="D14">
+        <input type="button" onclick="changeDuration(15)" value="90 min" class="para1" id="D15">
+        <input type="range" min="0" max="10" name="volume5" style="width:150px;" onchange="changeVolume()">
+            <audio controls id="audio5" style="display:none;">
+                <source src="../../sound_files/seabirdx30.mp3" id="aud5" />
+            </audio> <br><br>
+        
+        <label style="color:#ffffff;">
+            <input type="checkbox" name="song6" class="ch">Walking
+        </label><br>
+        <input type="button" onclick="changeDuration(16)" value="30 min" class="para1" id="D16">
+        <input type="button" onclick="changeDuration(17)" value="60 min" class="para1" id="D17">
+        <input type="button" onclick="changeDuration(18)" value="90 min" class="para1" id="D18">
+        <input type="range" min="0" max="10" name="volume6" style="width:150px;" onchange="changeVolume()">
+            <audio controls id="audio6" style="display:none;">
+                <source src="../../sound_files/walkingInForestx30.mp3" id="aud6" />
+            </audio> <br><br>
+        
+        <label style="color:#ffffff;">
+            <input type="checkbox" name="song7" class="ch">Village Birds
+        </label><br>
+        <input type="button" onclick="changeDuration(19)" value="30 min" class="para1" id="D19">
+        <input type="button" onclick="changeDuration(20)" value="60 min" class="para1" id="D20">
+        <input type="button" onclick="changeDuration(21)" value="90 min" class="para1" id="D21">
+        <input type="range" min="0" max="10" name="volume7" style="width:150px;" onchange="changeVolume()">
+            <audio controls id="audio7" style="display:none;">
+                <source src="../../sound_files/birds2x30.mp3" id="aud7" />
+            </audio> <br><br>
+        
+        <label style="color:#ffffff;">
+            <input type="checkbox" name="song8" class="ch">Leafs
+        </label><br>
+        <input type="button" onclick="changeDuration(22)" value="30 min" class="para1" id="D22">
+        <input type="button" onclick="changeDuration(23)" value="60 min" class="para1" id="D23">
+        <input type="button" onclick="changeDuration(24)" value="90 min" class="para1" id="D24">
+        <input type="range" min="0" max="10" name="volume8" style="width:150px;" onchange="changeVolume()">
+            <audio controls id="audio8" style="display:none;">
+                <source src="../../sound_files/leafx30.mp3" id="aud8" />
+            </audio> <br><br>
+    </form>
+    
+    <br><br><br>
+    
+    <button onclick="myfunction1()" class="fb">play all</button>
+    <button onclick="myfunction2()" class="fb">clear</button>
+    <a href="../folder/moodPage.html" target="w2" id="mood">Mood Page</a>
+</body>
+</html>

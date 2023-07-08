@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style> 
+        h1 {
+            font-family: Times new roman;
+            font-size: 30px;
+            text-align: center;
+            color: #545454;
+            margin: 0px;
+        }
+        
+        p {
+            font-family: Times new roman;
+            font-size: 18px;
+            text-align: center;
+            color: #999999;
+            margin: 0px;
+        }
+        
+        #aud {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            width: 50%;
+        }
+        
+        button {
+            font-size: 8px;
+        }
+    </style>
+    <script>
+        function photoFunction () {
+            if(document.getElementById("photo").src = "../../images_for_website/stream1.jpg") {
+                document.getElementById("photo").src = "../../images_for_website/stream2.jpg";
+                document.getElementById("B1").style.backgroundColor="#f7f563";
+                document.getElementById("B2").style.backgroundColor="#e7e7e7";
+            }
+        }
+        
+        function photoFunction2 () {
+            if(document.getElementById("photo").src = "../../images_for_website/stream2.jpg") {
+                document.getElementById("photo").src = "../../images_for_website/stream1.jpg";
+                document.getElementById("B2").style.backgroundColor="#f7f563";
+                document.getElementById("B1").style.backgroundColor="#e7e7e7";
+            }
+        }
+    </script>
+</head>
+<body>
+    <table border=0 width=770 height=635>
+        <tr height=80>
+            <td colspan=3>
+                <h1>Golden Axe, Silver Axe, Wooden Axe </h1>
+                <p>Cheonggyesan Mountain | stream</p>
+            </td>
+            <!--<td>
+            </td>
+            <td>
+            </td>-->
+        </tr>
+        <tr>
+            <td width=120>
+                <a href="../maps/map1.html" target="w1" style="background-color:#e7e7e7;text-decoration: none;font-size:15px;padding:10px 10px;margin-left: 10px;color:#000000;">See Map</a>
+            </td>
+            <td rowspan=2>
+                <img src="../../images_for_website/stream1.jpg" id ="photo" width=530 height=390/>
+            </td>
+            <td width=120>
+                <button onclick="photoFunction()" id="B1">change<br>photo</button><br>
+                <button onclick="photoFunction2()" id="B2">change<br>back</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <!--<td>
+            </td>-->
+            <td>
+            </td>
+        </tr>
+        <tr height=100>
+            <td>
+            </td>
+            <td>
+                <audio controls autoplay loop id="aud">
+                    <source src="../../sound_files/streamx60.mp3" />
+                </audio>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr height=65>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
